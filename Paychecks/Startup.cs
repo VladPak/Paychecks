@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Paychecks.Persistence;
+using Paychecks.Services;
+using Paychecks.Services.Implementation;
 //using Paychecks.Data;
 //using System;
 //using System.Collections.Generic;
@@ -42,6 +44,7 @@ namespace Paychecks
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddScoped<IEmployeeService, EmployeeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

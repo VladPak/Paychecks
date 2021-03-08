@@ -36,7 +36,7 @@ namespace Paychecks.Models
         public DateTime DOB { get; set; }
 
         [DataType(DataType.Date), Display(Name = "Joining Date")]
-        public DateTime DateJoined { get; set; };
+        public DateTime DateJoined { get; set; }
 
         public string PhoneNumber { get; set; }
 

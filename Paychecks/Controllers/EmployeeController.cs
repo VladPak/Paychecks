@@ -37,7 +37,6 @@ namespace Paychecks.Controllers
             return View(employees);
         }
 
-
         [HttpGet]
         public IActionResult Create()
         {
