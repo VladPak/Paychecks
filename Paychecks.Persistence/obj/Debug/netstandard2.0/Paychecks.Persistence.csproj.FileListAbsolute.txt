@@ -1,0 +1,12 @@
+C:\Projects\Paychecks\Paychecks.Persistence\bin\Debug\netstandard2.0\Paychecks.Entity.dll
+C:\Projects\Paychecks\Paychecks.Persistence\obj\Debug\netstandard2.0\Paychecks.Persistence.csprojAssemblyReference.cache
+C:\Projects\Paychecks\Paychecks.Persistence\obj\Debug\netstandard2.0\Paychecks.Persistence.AssemblyInfoInputs.cache
+C:\Projects\Paychecks\Paychecks.Persistence\obj\Debug\netstandard2.0\Paychecks.Persistence.AssemblyInfo.cs
+C:\Projects\Paychecks\Paychecks.Persistence\bin\Debug\netstandard2.0\Paychecks.Persistence.deps.json
+C:\Projects\Paychecks\Paychecks.Persistence\bin\Debug\netstandard2.0\Paychecks.Persistence.dll
+C:\Projects\Paychecks\Paychecks.Persistence\bin\Debug\netstandard2.0\Paychecks.Persistence.pdb
+C:\Projects\Paychecks\Paychecks.Persistence\bin\Debug\netstandard2.0\Paychecks.Entity.pdb
+C:\Projects\Paychecks\Paychecks.Persistence\obj\Debug\netstandard2.0\Paychecks.Persistence.csproj.CoreCompileInputs.cache
+C:\Projects\Paychecks\Paychecks.Persistence\obj\Debug\netstandard2.0\Paychecks.Persistence.csproj.CopyComplete
+C:\Projects\Paychecks\Paychecks.Persistence\obj\Debug\netstandard2.0\Paychecks.Persistence.dll
+C:\Projects\Paychecks\Paychecks.Persistence\obj\Debug\netstandard2.0\Paychecks.Persistence.pdb
