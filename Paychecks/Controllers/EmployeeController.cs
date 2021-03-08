@@ -37,6 +37,7 @@ namespace Paychecks.Controllers
             return View(employees);
         }
 
+
         [HttpGet]
         public IActionResult Create()
         {
@@ -165,6 +166,60 @@ namespace Paychecks.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult Detail(int id)
+        {
+            var employee = _employeeService.GetById(id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            EmployeeDetailViewModel model = new EmployeeDetailViewModel()
+            {
+                Id = employee.Id,
+                EmployeeNo = employee.EmployeeNo,
+                FullName = employee.FullName,
+                Gender = employee.Gender,
+                Email = employee.Email,
+                DOB = employee.DOB,
+                DateJoined = employee.DateJoined,
+                NationalInsuranceNo = employee.NationalInsuranceNo,
+                PaymentMethod = employee.PaymentMethod,
+                StudentLoan = employee.StudentLoan,
+                UnionMember = employee.UnionMember,
+                Address = employee.Address,
+                City = employee.City,
+                PhoneNumber = employee.PhoneNumber,
+                Postcode = employee.Postcode,
+                Designation = employee.Designation
+            };
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var employee = _employeeService.GetById(id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            var model = new EmployeeDeleteViewModel()
+            {
+                Id = employee.Id,
+                FullName = employee.FullName
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(EmployeeDeleteViewModel model)
+        {
+            await _employeeService.Delete(model.Id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
