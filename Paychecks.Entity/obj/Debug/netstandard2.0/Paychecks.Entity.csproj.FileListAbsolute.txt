@@ -6,3 +6,4 @@ C:\Projects\Paychecks\Paychecks.Entity\obj\Debug\netstandard2.0\Paychecks.Entity
 C:\Projects\Paychecks\Paychecks.Entity\obj\Debug\netstandard2.0\Paychecks.Entity.csproj.CoreCompileInputs.cache
 C:\Projects\Paychecks\Paychecks.Entity\obj\Debug\netstandard2.0\Paychecks.Entity.dll
 C:\Projects\Paychecks\Paychecks.Entity\obj\Debug\netstandard2.0\Paychecks.Entity.pdb
+C:\Projects\Paychecks\Paychecks.Entity\obj\Debug\netstandard2.0\Paychecks.Entity.csprojAssemblyReference.cache

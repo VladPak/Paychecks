@@ -1,0 +1,66 @@
+﻿@model IEnumerable<EmployeeIndexViewModel>
+
+
+@{
+    ViewData["Title"] = "All Employee";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-md-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Emplooyee List</li>
+                    </ol>
+                </nav>
+                </br></br>
+                <div class="row">
+                    <div class="col-md-12 table-responsive-md">
+                        <a class="btn btn-xs btn-outline-success float-md-right" asp-controller="Employee" asp-action="Create">Create</a>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Employee Number</th>
+                                    <th>Employee Photo</th>
+                                    <th>Employee FullName</th>
+                                    <th>Employee Gender</th>
+                                    <th>Employee Designation</th>
+                                    <th>Employee City</th>
+                                    <th>Employee Date Joined</th>
+                                    <th class="text-warning">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var emp in Model)
+                                {
+                                <tr>
+                                    <td>
+                                        <a asp-action="Detail" asp-route-id="@emp.Id">@emp.EmployeeNumber</a>
+                                    </td>
+                                    <td>
+                                        <img src="@Url.Content(emp.ImageUrl)" alt="Profile Image" />
+                                    </td>
+                                    <td>@emp.FullName</td>
+                                    <td>@emp.Gender</td>
+                                    <td>@emp.Designation</td>
+                                    <td>@emp.City</td>
+                                    <td>@emp.DateJoined</td>
+                                    <td>
+                                        <a class="text-warning" asp-action="Edit" asp-route-id="@emp.Id">Edit</a>
+                                        <a class="text-danger" asp-action="Delete" asp-route-id="@emp.Id">Delete</a>
+                                        <a class="text-primary" asp-action="Detail" asp-route-id="@emp.Id">Detail</a>
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

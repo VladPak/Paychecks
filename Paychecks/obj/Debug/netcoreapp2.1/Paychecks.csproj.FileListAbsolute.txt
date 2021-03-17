@@ -42,3 +42,4 @@ C:\Projects\Paychecks\Paychecks\obj\Debug\netcoreapp2.1\Paychecks.csproj.CopyCom
 C:\Projects\Paychecks\Paychecks\obj\Debug\netcoreapp2.1\Paychecks.dll
 C:\Projects\Paychecks\Paychecks\obj\Debug\netcoreapp2.1\Paychecks.pdb
 C:\Projects\Paychecks\Paychecks\obj\Debug\netcoreapp2.1\Paychecks.genruntimeconfig.cache
+C:\Projects\Paychecks\Paychecks\obj\Debug\netcoreapp2.1\Razor\Views\Employee\Index.cshtml.g.cs
