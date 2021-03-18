@@ -48,7 +48,7 @@
                                     <td>@emp.Gender</td>
                                     <td>@emp.Designation</td>
                                     <td>@emp.City</td>
-                                    <td>@emp.DateJoined</td>
+                                    <td>@emp.DateJoined.ToString("dd/MM/yyyy")</td>
                                     <td>
                                         <a class="text-warning" asp-action="Edit" asp-route-id="@emp.Id">Edit</a>
                                         <a class="text-danger" asp-action="Delete" asp-route-id="@emp.Id">Delete</a>
