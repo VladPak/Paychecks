@@ -192,6 +192,7 @@ namespace Paychecks.Controllers
                 City = employee.City,
                 PhoneNumber = employee.PhoneNumber,
                 Postcode = employee.Postcode,
+                ImageUrl = employee.ImageUrl,
                 Designation = employee.Designation
             };
             return View(model);

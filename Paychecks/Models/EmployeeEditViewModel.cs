@@ -13,7 +13,7 @@ namespace Paychecks.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Employee number is required")]
-        [RegularExpression(@"^[A-Z]{3,3}[0,9]{3}$")]
+        //[RegularExpression(@"^[A-Z]{3,3}[0,9]{3}$")]
         public string EmployeeNo { get; set; }
 
         [Required(ErrorMessage = "First Name is required"), StringLength(50, MinimumLength = 2)]
