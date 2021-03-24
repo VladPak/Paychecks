@@ -12,6 +12,8 @@ namespace Paychecks.Services.Implementation
     {
         //Create ref to DB
         private readonly ApplicationDbContext _context;
+        private decimal studentLoanAmount;
+
         //Constructor for DB _context
         public EmployeeService(ApplicationDbContext context)
         {
@@ -54,15 +56,34 @@ namespace Paychecks.Services.Implementation
         //Get all employees
         public IEnumerable<Employee> GetAll() => _context.Employees;
 
-        //
+        //Loan Repayment
         public decimal StudentLoanRepaymentAmount(int id, decimal totalAmount)
         {
-            throw new NotImplementedException();
+            var employeeId = GetById(id);
+            if (employeeId.StudentLoan == StudentLoan.Yes && totalAmount > 1750 && totalAmount < 2000)
+            {
+                studentLoanAmount = 15m;
+            }
+            else if (employeeId.StudentLoan == StudentLoan.Yes && totalAmount >= 2000 && totalAmount < 2250)
+            {
+                studentLoanAmount = 38m;
+            }
+            else if (employeeId.StudentLoan == StudentLoan.Yes && totalAmount >= 2500)
+            {
+                studentLoanAmount = 83m;
+            }
+            else
+            {
+                studentLoanAmount = 0;
+            }
+            return studentLoanAmount;
         }
 
         public decimal UnionFees(int id)
         {
-            throw new NotImplementedException();
+            var employeeId = GetById(id);
+            var fee = employeeId.UnionMember == UnionMember.Yes ? 10m : 0m;
+            return fee;
         }
     }
 }
